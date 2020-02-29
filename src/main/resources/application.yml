@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: crazykid-springboot-study
+
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+crazykid:
+  springboot:
+    version: 233
+    name: haha
