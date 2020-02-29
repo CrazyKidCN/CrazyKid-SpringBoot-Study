@@ -41,6 +41,8 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- 启动actuator需要的依赖：↓↓ -->
+        <!-- 还有另一个依赖是 starter-web，应用必须是个 web 项目 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

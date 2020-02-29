@@ -11,7 +11,7 @@ import java.util.function.*;
 public class LambdaStudy {
     public static void main(String[] args) {
         // 接受一个泛型，返回布尔值结果。
-        Predicate<String> pre = (String username) -> "admin".equals(username);
+        Predicate<String> pre = "admin"::equals;
         System.out.println(pre.test("admin"));
         System.out.println(pre.test("manager"));
 

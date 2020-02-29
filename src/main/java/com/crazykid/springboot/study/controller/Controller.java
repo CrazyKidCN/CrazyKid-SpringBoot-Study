@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * SpringBoot 配置注入的方式
+ */
 @Slf4j
 @RestController
 @RequestMapping("/springboot")
 public class Controller {
+
+    // 方式一：通过 @Value 注解
     @Value("${crazykid.springboot.version}")
     private String version;
     @Value("${crazykid.springboot.name}")
@@ -21,7 +26,7 @@ public class Controller {
     private SpringBootConfig springBootConfig;
 
     /**
-     * 使用 @Value 进行数据注入
+     * 方式一：使用注解 @Value 进行数据注入
      * localhost:8080/springboot/firstConfInject
      */
     @GetMapping("/firstConfInject")
@@ -30,7 +35,7 @@ public class Controller {
     }
 
     /**
-     * 创建配置类并使用注解 @ConfigurationProperties 来注入
+     * 方式二：创建配置类并使用注解 @ConfigurationProperties 来注入
      * localhost:8080/springboot/secondConfInject
      */
     @GetMapping("/secondConfInject")
