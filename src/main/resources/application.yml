@@ -9,7 +9,28 @@ server:
     context-path: /
   port: 8080
 
+# 下面是自定义的配置，用于学习SpringBoot配置注入
 crazykid:
   springboot:
     version: 233
     name: haha
+
+# 下面是 SpringBoot 监控 actuator 的配置
+# /actuator  ←访问路径，如果有配置context-path，前面需要加上
+management:
+  endpoint:
+    shutdown:
+      enabled: true # 最特殊的端点，默认是false，访问该端点可以关闭掉项目，通常不开！
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 打开所有的监控点
+
+# 下面是配置当访问 /actuator/info 时返回的自定义内容（如果不配置，默认是不返回的）
+info:
+  app:
+    name: CrazyKid-SpringBoot-Study
+    groupId: CrazyKid
+    version: 233
+  otherCustomInfo:
+    key: value
