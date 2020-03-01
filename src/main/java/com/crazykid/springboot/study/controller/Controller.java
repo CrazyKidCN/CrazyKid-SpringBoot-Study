@@ -37,6 +37,7 @@ public class Controller {
     /**
      * 方式二：创建配置类并使用注解 @ConfigurationProperties 来注入
      * localhost:8080/springboot/secondConfInject
+     * {@link SpringBootConfig}
      */
     @GetMapping("/secondConfInject")
     public void secondConfInject() {
